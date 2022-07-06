@@ -15,13 +15,13 @@
 # Inherit from joyeuse device tree
 $(call inherit-product, device/xiaomi/joyeuse/device.mk)
 
-# Inherit some common from AOSP ROM stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common from Fusion OS stuff
+$(call inherit-product, vendor/fuse/config/common.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := aosp_joyeuse
+PRODUCT_NAME := fuse_joyeuse
 PRODUCT_DEVICE := joyeuse
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 9 Pro
@@ -33,3 +33,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="raven-user 12 S2B3.220205.007.A1 8133516 release-keys"
 
 BUILD_FINGERPRINT := google/raven/raven:12/S2B3.220205.007.A1/8133516:user/release-keys
+
+# Fusion OS Flag
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GAPPS := true
+FUSE_BUILD_VARIANT := Maverick
