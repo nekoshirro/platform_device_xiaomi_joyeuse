@@ -24,6 +24,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.device.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.device.rc
 
 # NFC
+TARGET_NFC_SKU := joyeuse
+
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     SecureElement \
